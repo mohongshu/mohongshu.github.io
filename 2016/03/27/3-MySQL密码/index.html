@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="MySQL," />
 
 
 
@@ -57,22 +57,19 @@
 
 
 
-<meta name="description" content="安装git1yum install git -y
-安装node.js1yum install npm -y
-安装Hexo1npm install -g hexo">
+<meta name="description" content="修改密码mysqladmin命令改密码12###例如修改root的密码为123456mysqladmin -uroot password &amp;apos;123456&amp;apos; -p
+登录mysql交互界面修改密码123mysql&amp;gt;SET PASSWORD FOR &amp;apos;username&amp;apos;@&amp;apos;host&amp;apos;=PASSWORD(&amp;apos;new_pass&amp;apo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1.Hexo博客部署">
-<meta property="og:url" content="http://yoursite.com/2016/03/19/1-Hexo博客部署/index.html">
+<meta property="og:title" content="3.MySQL密码">
+<meta property="og:url" content="http://yoursite.com/2016/03/27/3-MySQL密码/index.html">
 <meta property="og:site_name" content="小莫">
-<meta property="og:description" content="安装git1yum install git -y
-安装node.js1yum install npm -y
-安装Hexo1npm install -g hexo">
-<meta property="og:updated_time" content="2016-03-23T15:40:15.000Z">
+<meta property="og:description" content="修改密码mysqladmin命令改密码12###例如修改root的密码为123456mysqladmin -uroot password &amp;apos;123456&amp;apos; -p
+登录mysql交互界面修改密码123mysql&amp;gt;SET PASSWORD FOR &amp;apos;username&amp;apos;@&amp;apos;host&amp;apos;=PASSWORD(&amp;apos;new_pass&amp;apo">
+<meta property="og:updated_time" content="2016-03-28T08:12:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1.Hexo博客部署">
-<meta name="twitter:description" content="安装git1yum install git -y
-安装node.js1yum install npm -y
-安装Hexo1npm install -g hexo">
+<meta name="twitter:title" content="3.MySQL密码">
+<meta name="twitter:description" content="修改密码mysqladmin命令改密码12###例如修改root的密码为123456mysqladmin -uroot password &amp;apos;123456&amp;apos; -p
+登录mysql交互界面修改密码123mysql&amp;gt;SET PASSWORD FOR &amp;apos;username&amp;apos;@&amp;apos;host&amp;apos;=PASSWORD(&amp;apos;new_pass&amp;apo">
 
 
 
@@ -90,7 +87,7 @@
   };
 </script>
 
-  <title> 1.Hexo博客部署 | 小莫 </title>
+  <title> 3.MySQL密码 | 小莫 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -210,7 +207,7 @@
             
             
               
-                1.Hexo博客部署
+                3.MySQL密码
               
             
           </h1>
@@ -222,8 +219,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-19T22:18:54-04:00" content="2016-03-20">
-              2016-03-20
+            <time itemprop="dateCreated" datetime="2016-03-27T15:34:27-04:00" content="2016-03-28">
+              2016-03-28
             </time>
           </span>
 
@@ -249,19 +246,9 @@
       
 
       
-        <h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git -y</span><br></pre></td></tr></table></figure>
-<h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install npm -y</span><br></pre></td></tr></table></figure>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="安装hexo-deployer-git"><a href="#安装hexo-deployer-git" class="headerlink" title="安装hexo-deployer-git"></a>安装hexo-deployer-git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<h2 id="使用Hexo"><a href="#使用Hexo" class="headerlink" title="使用Hexo"></a>使用Hexo</h2><p>创建Hexo工作目录，初始化Hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir hexodir</span><br><span class="line">cd hexodir/ </span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure></p>
-<p>生成静态网页，在hexo工作目录内执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></p>
-<p>发布博文，在hexo工作目录内执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><p>修改hexo工作目录的_config.yml文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/yourname/yourname.github.io.git </span><br><span class="line">  branch: master</span><br><span class="line"></span><br><span class="line"># or this:</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  message: [message]</span><br><span class="line">  repo: </span><br><span class="line">    github: &lt;repository url&gt;,[branch]</span><br><span class="line">    gitcafe: &lt;repository url&gt;,[branch]</span><br></pre></td></tr></table></figure></p>
-<h2 id="编写新博文"><a href="#编写新博文" class="headerlink" title="编写新博文"></a>编写新博文</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post &quot;博文标题&quot;</span><br></pre></td></tr></table></figure>
-<p>新建的博文目录hexodir/source/_posts/，使用markdown格式编写。</p>
-<h2 id="更多使用技巧"><a href="#更多使用技巧" class="headerlink" title="更多使用技巧"></a>更多使用技巧</h2><p><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a></p>
-
+        <h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><h3 id="mysqladmin命令改密码"><a href="#mysqladmin命令改密码" class="headerlink" title="mysqladmin命令改密码"></a>mysqladmin命令改密码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">###例如修改root的密码为123456</span><br><span class="line">mysqladmin -uroot password &apos;123456&apos; -p</span><br></pre></td></tr></table></figure>
+<h3 id="登录mysql交互界面修改密码"><a href="#登录mysql交互界面修改密码" class="headerlink" title="登录mysql交互界面修改密码"></a>登录mysql交互界面修改密码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;SET PASSWORD FOR &apos;username&apos;@&apos;host&apos;=PASSWORD(&apos;new_pass&apos;);</span><br><span class="line">or</span><br><span class="line">mysql&gt;UPDATE mysql.user SET password=PASSWORD(&apos;new_password&apos;) WHERE user=&apos;username&apos;;</span><br></pre></td></tr></table></figure>
+<h2 id="找回密码"><a href="#找回密码" class="headerlink" title="找回密码"></a>找回密码</h2>
       
     </div>
 
@@ -275,7 +262,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+            <a href="/tags/MySQL/" rel="tag">#MySQL</a>
           
         </div>
       
@@ -284,13 +271,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/22/2-Mysql主从复制基本配置与实现/" rel="next" title="2.Mysql主从复制基本配置与实现">
+                <i class="fa fa-chevron-left"></i> 2.Mysql主从复制基本配置与实现
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/22/2-Mysql主从复制基本配置与实现/" rel="prev" title="2.Mysql主从复制基本配置与实现">
-                2.Mysql主从复制基本配置与实现 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -412,7 +399,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装git"><span class="nav-number">1.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装node-js"><span class="nav-number">2.</span> <span class="nav-text">安装node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">3.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo-deployer-git"><span class="nav-number">4.</span> <span class="nav-text">安装hexo-deployer-git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Hexo"><span class="nav-number">5.</span> <span class="nav-text">使用Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到github"><span class="nav-number">6.</span> <span class="nav-text">部署到github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写新博文"><span class="nav-number">7.</span> <span class="nav-text">编写新博文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更多使用技巧"><span class="nav-number">8.</span> <span class="nav-text">更多使用技巧</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改密码"><span class="nav-number">1.</span> <span class="nav-text">修改密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mysqladmin命令改密码"><span class="nav-number">1.1.</span> <span class="nav-text">mysqladmin命令改密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#登录mysql交互界面修改密码"><span class="nav-number">1.2.</span> <span class="nav-text">登录mysql交互界面修改密码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#找回密码"><span class="nav-number">2.</span> <span class="nav-text">找回密码</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
