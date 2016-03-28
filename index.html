@@ -251,7 +251,12 @@
           
             <h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><h3 id="mysqladmin命令改密码"><a href="#mysqladmin命令改密码" class="headerlink" title="mysqladmin命令改密码"></a>mysqladmin命令改密码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">###例如修改root的密码为123456</span><br><span class="line">mysqladmin -uroot password &apos;123456&apos; -p</span><br></pre></td></tr></table></figure>
 <h3 id="登录mysql交互界面修改密码"><a href="#登录mysql交互界面修改密码" class="headerlink" title="登录mysql交互界面修改密码"></a>登录mysql交互界面修改密码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;SET PASSWORD FOR &apos;username&apos;@&apos;host&apos;=PASSWORD(&apos;new_pass&apos;);</span><br><span class="line">or</span><br><span class="line">mysql&gt;UPDATE mysql.user SET password=PASSWORD(&apos;new_password&apos;) WHERE user=&apos;username&apos;;</span><br></pre></td></tr></table></figure>
-<h2 id="找回密码"><a href="#找回密码" class="headerlink" title="找回密码"></a>找回密码</h2>
+<h2 id="找回密码"><a href="#找回密码" class="headerlink" title="找回密码"></a>找回密码</h2><h3 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h3><p>停止数据库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop mariadb</span><br></pre></td></tr></table></figure></p>
+<p>忽略授权启动：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld_safe --skip-grant-tables --user=mysql &amp;</span><br></pre></td></tr></table></figure></p>
+<p>进入mysql数据库更改密码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql</span><br><span class="line">mysql&gt;update mysql.user set password=password(&apos;123&apos;) where user=&apos;root&apos;;</span><br><span class="line">mysql&gt;flush privileges;</span><br></pre></td></tr></table></figure></p>
+<p>重启数据库</p>
+<h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><p>配置文件/etc/my.cnf<br>在[mysqld]配置段添加如下一行：<br>skip-grant-tables</p>
+
           
         
       
