@@ -57,16 +57,19 @@
 
 
 
-<meta name="description" content="生活不止眼前的苟且，还有诗和远方的田野。你赤手空拳来到人世间，为找到那片海不顾一切。">
+<meta name="description" content="删除redhat原有的yum源rpm -aq | grep yum | xargs rpm -e –nodepsrpm -aq | grep python-iniparse | xargs rpm -e –nodeps
+下载新的yum安装包http://mirrors.163.com/centos/7/os/x86_64/Packages/python-iniparse-0.4-9.el7.noa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="4.更换rehat7的yum源">
 <meta property="og:url" content="http://yoursite.com/2016/03/29/4-更换rehat7的yum源/index.html">
 <meta property="og:site_name" content="小莫">
-<meta property="og:description" content="生活不止眼前的苟且，还有诗和远方的田野。你赤手空拳来到人世间，为找到那片海不顾一切。">
-<meta property="og:updated_time" content="2016-03-31T02:17:24.000Z">
+<meta property="og:description" content="删除redhat原有的yum源rpm -aq | grep yum | xargs rpm -e –nodepsrpm -aq | grep python-iniparse | xargs rpm -e –nodeps
+下载新的yum安装包http://mirrors.163.com/centos/7/os/x86_64/Packages/python-iniparse-0.4-9.el7.noa">
+<meta property="og:updated_time" content="2016-03-31T02:54:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="4.更换rehat7的yum源">
-<meta name="twitter:description" content="生活不止眼前的苟且，还有诗和远方的田野。你赤手空拳来到人世间，为找到那片海不顾一切。">
+<meta name="twitter:description" content="删除redhat原有的yum源rpm -aq | grep yum | xargs rpm -e –nodepsrpm -aq | grep python-iniparse | xargs rpm -e –nodeps
+下载新的yum安装包http://mirrors.163.com/centos/7/os/x86_64/Packages/python-iniparse-0.4-9.el7.noa">
 
 
 
@@ -243,7 +246,13 @@
       
 
       
-        
+        <h3 id="删除redhat原有的yum源"><a href="#删除redhat原有的yum源" class="headerlink" title="删除redhat原有的yum源"></a>删除redhat原有的yum源</h3><p>rpm -aq | grep yum | xargs rpm -e –nodeps<br>rpm -aq | grep python-iniparse | xargs rpm -e –nodeps</p>
+<h3 id="下载新的yum安装包"><a href="#下载新的yum安装包" class="headerlink" title="下载新的yum安装包"></a>下载新的yum安装包</h3><p><a href="http://mirrors.163.com/centos/7/os/x86_64/Packages/python-iniparse-0.4-9.el7.noarch.rpm" target="_blank" rel="external">http://mirrors.163.com/centos/7/os/x86_64/Packages/python-iniparse-0.4-9.el7.noarch.rpm</a><br><a href="http://mirrors.163.com/centos/7/os/x86_64/Packages/yum-metadata-parser-1.1.4-10.el7.x86_64.rpm" target="_blank" rel="external">http://mirrors.163.com/centos/7/os/x86_64/Packages/yum-metadata-parser-1.1.4-10.el7.x86_64.rpm</a><br><a href="http://mirrors.163.com/centos/7/os/x86_64/Packages/yum-3.4.3-132.el7.centos.0.1.noarch.rpm" target="_blank" rel="external">http://mirrors.163.com/centos/7/os/x86_64/Packages/yum-3.4.3-132.el7.centos.0.1.noarch.rpm</a><br><a href="http://mirrors.163.com/centos/7/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.31-34.el7.noarch.rpm" target="_blank" rel="external">http://mirrors.163.com/centos/7/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.31-34.el7.noarch.rpm</a></p>
+<h3 id="安装yum软件包"><a href="#安装yum软件包" class="headerlink" title="安装yum软件包"></a>安装yum软件包</h3><p>rpm -ivh python-iniparse-0.4-9.el7.noarch.rpm<br>rpm -ivh yum-metadata-parser-1.1.4-10.el7.x86_64.rpm<br>rpm -ivh  yum-3.4.3-132.el7.centos.0.1.noarch.rpm yum-plugin-fastestmirror-1.1.31-34.el7.noarch.rpm</p>
+<p>注意：最后两个安装包要放在一起同时安装，否则会提示相互依赖，安装失败。</p>
+<h3 id="更改yum源-我们使用网易的CentOS镜像源"><a href="#更改yum源-我们使用网易的CentOS镜像源" class="headerlink" title="更改yum源 #我们使用网易的CentOS镜像源"></a>更改yum源 #我们使用网易的CentOS镜像源</h3><p>cd /etc/yum.repos.d/<br>wget <a href="http://mirrors.163.com/.help/CentOS6-Base-163.repo" target="_blank" rel="external">http://mirrors.163.com/.help/CentOS6-Base-163.repo</a><br>sudo gedit CentOS6-Base-163.repo<br>查找与替换，将 $releasever 换成 7 ，将 几个6 也换成 7 。保存。<br>把原有的rehat源移到备份文件夹<br>把网易源CentOS6-Base-163.repo的第一个enabled=0改为enabled=1</p>
+<h3 id="清理yum缓存"><a href="#清理yum缓存" class="headerlink" title="清理yum缓存"></a>清理yum缓存</h3><p>yum clean all<br>yum makecache #将服务器上的软件包信息缓存到本地,以提高搜索安装软件的速度<br>yum install fcitx #测试yum是否可用</p>
+
       
     </div>
 
@@ -394,7 +403,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#删除redhat原有的yum源"><span class="nav-number">1.</span> <span class="nav-text">删除redhat原有的yum源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载新的yum安装包"><span class="nav-number">2.</span> <span class="nav-text">下载新的yum安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装yum软件包"><span class="nav-number">3.</span> <span class="nav-text">安装yum软件包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改yum源-我们使用网易的CentOS镜像源"><span class="nav-number">4.</span> <span class="nav-text">更改yum源 #我们使用网易的CentOS镜像源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清理yum缓存"><span class="nav-number">5.</span> <span class="nav-text">清理yum缓存</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
