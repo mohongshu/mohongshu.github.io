@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="yum," />
+  <meta name="keywords" content="Nginx,LNMP," />
 
 
 
@@ -57,19 +57,22 @@
 
 
 
-<meta name="description" content="删除redhat原有的yum源12rpm -aq | grep yum | xargs rpm -e --nodepsrpm -aq | grep python-iniparse | xargs rpm -e --nodeps
-下载新的yum安装包http://mirrors.163.com/centos/7/os/x86_64/Packages/python-iniparse-0.4-9.el7">
+<meta name="description" content="安装Nginx1yum install nginx -y
+安装Mysql1yum install mairadb -y
+安装PHP，php-mysql，php-fpm1yum install php php-mysql php-fpm -y">
 <meta property="og:type" content="article">
-<meta property="og:title" content="4.更换rehat7的yum源">
-<meta property="og:url" content="http://yoursite.com/2016/03/29/4-更换rehat7的yum源/index.html">
+<meta property="og:title" content="5-LNMP简单实现配置">
+<meta property="og:url" content="http://yoursite.com/2016/04/07/5.LNMP简单实现配置/index.html">
 <meta property="og:site_name" content="小莫">
-<meta property="og:description" content="删除redhat原有的yum源12rpm -aq | grep yum | xargs rpm -e --nodepsrpm -aq | grep python-iniparse | xargs rpm -e --nodeps
-下载新的yum安装包http://mirrors.163.com/centos/7/os/x86_64/Packages/python-iniparse-0.4-9.el7">
-<meta property="og:updated_time" content="2016-03-31T03:04:12.000Z">
+<meta property="og:description" content="安装Nginx1yum install nginx -y
+安装Mysql1yum install mairadb -y
+安装PHP，php-mysql，php-fpm1yum install php php-mysql php-fpm -y">
+<meta property="og:updated_time" content="2016-04-08T06:28:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="4.更换rehat7的yum源">
-<meta name="twitter:description" content="删除redhat原有的yum源12rpm -aq | grep yum | xargs rpm -e --nodepsrpm -aq | grep python-iniparse | xargs rpm -e --nodeps
-下载新的yum安装包http://mirrors.163.com/centos/7/os/x86_64/Packages/python-iniparse-0.4-9.el7">
+<meta name="twitter:title" content="5-LNMP简单实现配置">
+<meta name="twitter:description" content="安装Nginx1yum install nginx -y
+安装Mysql1yum install mairadb -y
+安装PHP，php-mysql，php-fpm1yum install php php-mysql php-fpm -y">
 
 
 
@@ -87,7 +90,7 @@
   };
 </script>
 
-  <title> 4.更换rehat7的yum源 | 小莫 </title>
+  <title> 5-LNMP简单实现配置 | 小莫 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -207,7 +210,7 @@
             
             
               
-                4.更换rehat7的yum源
+                5-LNMP简单实现配置
               
             
           </h1>
@@ -219,8 +222,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-29T20:26:49-04:00" content="2016-03-30">
-              2016-03-30
+            <time itemprop="dateCreated" datetime="2016-04-07T11:57:19-04:00" content="2016-04-07">
+              2016-04-07
             </time>
           </span>
 
@@ -246,12 +249,16 @@
       
 
       
-        <h3 id="删除redhat原有的yum源"><a href="#删除redhat原有的yum源" class="headerlink" title="删除redhat原有的yum源"></a>删除redhat原有的yum源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -aq | grep yum | xargs rpm -e --nodeps</span><br><span class="line">rpm -aq | grep python-iniparse | xargs rpm -e --nodeps</span><br></pre></td></tr></table></figure>
-<h3 id="下载新的yum安装包"><a href="#下载新的yum安装包" class="headerlink" title="下载新的yum安装包"></a>下载新的yum安装包</h3><p><a href="http://mirrors.163.com/centos/7/os/x86_64/Packages/python-iniparse-0.4-9.el7.noarch.rpm" target="_blank" rel="external">http://mirrors.163.com/centos/7/os/x86_64/Packages/python-iniparse-0.4-9.el7.noarch.rpm</a><br><a href="http://mirrors.163.com/centos/7/os/x86_64/Packages/yum-metadata-parser-1.1.4-10.el7.x86_64.rpm" target="_blank" rel="external">http://mirrors.163.com/centos/7/os/x86_64/Packages/yum-metadata-parser-1.1.4-10.el7.x86_64.rpm</a><br><a href="http://mirrors.163.com/centos/7/os/x86_64/Packages/yum-3.4.3-132.el7.centos.0.1.noarch.rpm" target="_blank" rel="external">http://mirrors.163.com/centos/7/os/x86_64/Packages/yum-3.4.3-132.el7.centos.0.1.noarch.rpm</a><br><a href="http://mirrors.163.com/centos/7/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.31-34.el7.noarch.rpm" target="_blank" rel="external">http://mirrors.163.com/centos/7/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.31-34.el7.noarch.rpm</a><br><a id="more"></a></p>
-<h3 id="安装yum软件包"><a href="#安装yum软件包" class="headerlink" title="安装yum软件包"></a>安装yum软件包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh python-iniparse-0.4-9.el7.noarch.rpm</span><br><span class="line">rpm -ivh yum-metadata-parser-1.1.4-10.el7.x86_64.rpm</span><br><span class="line">rpm -ivh yum-3.4.3-132.el7.centos.0.1.noarch.rpm yum-plugin-fastestmirror-1.1.31-34.el7.noarch.rpm</span><br></pre></td></tr></table></figure>
-<p>注意：最后两个安装包要放在一起同时安装，否则会提示相互依赖，安装失败。</p>
-<h3 id="更改yum源-我们使用网易的CentOS镜像源"><a href="#更改yum源-我们使用网易的CentOS镜像源" class="headerlink" title="更改yum源 #我们使用网易的CentOS镜像源"></a>更改yum源 #我们使用网易的CentOS镜像源</h3><p>cd /etc/yum.repos.d/<br>wget <a href="http://mirrors.163.com/.help/CentOS6-Base-163.repo" target="_blank" rel="external">http://mirrors.163.com/.help/CentOS6-Base-163.repo</a><br>sudo gedit CentOS6-Base-163.repo<br>查找与替换，将 $releasever 换成 7 ，将 几个6 也换成 7 。保存。<br>把原有的rehat源移到备份文件夹<br>把网易源CentOS6-Base-163.repo的第一个enabled=0改为enabled=1</p>
-<h3 id="清理yum缓存"><a href="#清理yum缓存" class="headerlink" title="清理yum缓存"></a>清理yum缓存</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br><span class="line">yum makecache #将服务器上的软件包信息缓存到本地,以提高搜索安装软件的速度</span><br><span class="line">yum install fcitx #测试yum是否可用</span><br></pre></td></tr></table></figure>
+        <h3 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx -y</span><br></pre></td></tr></table></figure>
+<h3 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mairadb -y</span><br></pre></td></tr></table></figure>
+<h3 id="安装PHP，php-mysql，php-fpm"><a href="#安装PHP，php-mysql，php-fpm" class="headerlink" title="安装PHP，php-mysql，php-fpm"></a>安装PHP，php-mysql，php-fpm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install php php-mysql php-fpm -y</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="简单配置一下PHP，php-fpm"><a href="#简单配置一下PHP，php-fpm" class="headerlink" title="简单配置一下PHP，php-fpm"></a>简单配置一下PHP，php-fpm</h3><p>编辑/etc/php-fpm.d/www.conf设置用户，用户组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">user = nginx</span><br><span class="line">group = nginx</span><br></pre></td></tr></table></figure></p>
+<p>编辑/etc/php.ini开启PHP短标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">short_open_tag = On</span><br></pre></td></tr></table></figure></p>
+<h3 id="启动php-fpm"><a href="#启动php-fpm" class="headerlink" title="启动php-fpm"></a>启动php-fpm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start php-fpm</span><br></pre></td></tr></table></figure>
+<h3 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h3><p>编辑/etc/nginx/nginx.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">user nginx;</span><br><span class="line">worker_processes auto;</span><br><span class="line">error_log /var/log/nginx/error.log;</span><br><span class="line">pid /run/nginx.pid;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections 1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span><br><span class="line">                      &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span><br><span class="line">                      &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;</span><br><span class="line"></span><br><span class="line">    access_log  /var/log/nginx/access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile            on;</span><br><span class="line">    tcp_nopush          on;</span><br><span class="line">    tcp_nodelay         on;</span><br><span class="line">    keepalive_timeout   65;</span><br><span class="line">    types_hash_max_size 2048;</span><br><span class="line"></span><br><span class="line">    include             /etc/nginx/mime.types;</span><br><span class="line">    default_type        application/octet-stream;</span><br><span class="line"></span><br><span class="line">    include /etc/nginx/conf.d/*.conf;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  域名或ip地址;</span><br><span class="line">        root         /wordpress;</span><br><span class="line"></span><br><span class="line">        include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">	    index index.php index.html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">	location ~ \.php$ &#123;</span><br><span class="line">            fastcgi_pass   127.0.0.1:9000;</span><br><span class="line">            fastcgi_index  index.php;</span><br><span class="line">            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;</span><br><span class="line">            include        fastcgi_params;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page 404 /404.html;</span><br><span class="line">            location = /40x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page 500 502 503 504 /50x.html;</span><br><span class="line">            location = /50x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="启动Nginx"><a href="#启动Nginx" class="headerlink" title="启动Nginx"></a>启动Nginx</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start Nginx</span><br></pre></td></tr></table></figure>
+<h3 id="注意权限问题"><a href="#注意权限问题" class="headerlink" title="注意权限问题"></a>注意权限问题</h3><p>1.iptables是否允许80端口访问<br>2.selinux是否关闭</p>
 
       
     </div>
@@ -266,7 +273,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/yum/" rel="tag">#yum</a>
+            <a href="/tags/Nginx/" rel="tag">#Nginx</a>
+          
+            <a href="/tags/LNMP/" rel="tag">#LNMP</a>
           
         </div>
       
@@ -275,16 +284,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/27/3-MySQL密码/" rel="next" title="3.MySQL密码">
-                <i class="fa fa-chevron-left"></i> 3.MySQL密码
+              <a href="/2016/03/29/4-更换rehat7的yum源/" rel="next" title="4.更换rehat7的yum源">
+                <i class="fa fa-chevron-left"></i> 4.更换rehat7的yum源
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/07/5.LNMP简单实现配置/" rel="prev" title="5-LNMP简单实现配置">
-                5-LNMP简单实现配置 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/12/6.Nginx基本配置与参数说明/" rel="prev" title="6-Nginx基本配置与参数说明">
+                6-Nginx基本配置与参数说明 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -420,7 +429,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#删除redhat原有的yum源"><span class="nav-number">1.</span> <span class="nav-text">删除redhat原有的yum源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载新的yum安装包"><span class="nav-number">2.</span> <span class="nav-text">下载新的yum安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装yum软件包"><span class="nav-number">3.</span> <span class="nav-text">安装yum软件包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改yum源-我们使用网易的CentOS镜像源"><span class="nav-number">4.</span> <span class="nav-text">更改yum源 #我们使用网易的CentOS镜像源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清理yum缓存"><span class="nav-number">5.</span> <span class="nav-text">清理yum缓存</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Nginx"><span class="nav-number">1.</span> <span class="nav-text">安装Nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Mysql"><span class="nav-number">2.</span> <span class="nav-text">安装Mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装PHP，php-mysql，php-fpm"><span class="nav-number">3.</span> <span class="nav-text">安装PHP，php-mysql，php-fpm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单配置一下PHP，php-fpm"><span class="nav-number">4.</span> <span class="nav-text">简单配置一下PHP，php-fpm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动php-fpm"><span class="nav-number">5.</span> <span class="nav-text">启动php-fpm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置nginx"><span class="nav-number">6.</span> <span class="nav-text">配置nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动Nginx"><span class="nav-number">7.</span> <span class="nav-text">启动Nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意权限问题"><span class="nav-number">8.</span> <span class="nav-text">注意权限问题</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
